@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor do Brasil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Coluna do Perfil -->
+        <aside class="profile-column">
+            <div class="profile-header">
+                <img src="" alt="Sabor do Brasil" class="profile-logo">
+                <h2>Sabor do Brasil</h2>
+            </div>
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-icon">👍</span>
+                    <span class="stat-value" id="total-likes">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">👎</span>
+                    <span class="stat-value" id="total-dislikes">0</span>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="main-column">
+            <h1>Nossos Pratos</h1>
+
+            <div class="publications-container">
+                <!-- Publicações serão carregadas dinamicamente via JS -->
+            </div>
+        </main>
+
+        <!-- Coluna de Login -->
+        <aside class="login-column">
+            <button id="login-button" class="login-btn">Entrar</button>
+        </aside>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <span>Sabor do Brasil</span>
+            <div class="social-icons">
+                <span>📷</span>
+                <span>🐦</span>
+                <span>📱</span>
+                <span>🌐</span>
+            </div>
+            <span>Copyright © 2024</span>
+        </footer>
+    </div>
+
+    <!-- Modal de Login -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancel-btn" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-login">Entrar</button>
+                </div>
+            </form>
+            <p id="login-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Modal de Comentário -->
+    <div id="comment-modal" class="modal">
+        <div class="modal-content">
+            <h2>Adicionar Comentário</h2>
+            <div class="comment-user">
+                <span id="comment-username">Usuário</span>
+            </div>
+            <textarea id="comment-text" placeholder="Digite seu comentário..."></textarea>
+            <button id="submit-comment" class="btn-comment" disabled>Comentar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
